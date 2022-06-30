@@ -12,4 +12,12 @@ export class TasksService {
   getTasks(): Promise<Task[]> {
     return this.tasksRepository.find();
   }
+
+  async insertTask(task: Task): Promise<void> {
+    await this.tasksRepository.insert(task);
+  }
+
+  async deleteTask(taskId: number): Promise<void> {
+    await this.tasksRepository.delete({ id: taskId });
+  }
 }

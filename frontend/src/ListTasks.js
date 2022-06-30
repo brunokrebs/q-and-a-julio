@@ -8,7 +8,7 @@ export const ListTasks = () => {
   return (
     <ul className="flex flex-col gap-4">
       {tasks?.map((task) => (
-        <li key={task._id}>
+        <li key={task.id}>
           <Task task={task} deleteTask={deleteTask.mutate} />
         </li>
       ))}

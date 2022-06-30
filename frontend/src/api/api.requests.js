@@ -13,5 +13,5 @@ export const getTasks = () => {
 };
 
 export const deleteTask = (task) => {
-  return axiosClient.delete(`/${task._id}`);
+  return axiosClient.delete(`/${task.id}`);
 };
