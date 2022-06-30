@@ -1,8 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { TasksController } from './controllers/tasks.controller';
-import { TasksService } from './services/tasks.service';
 import { Task } from './entities/task.entity';
+import { TasksModule } from './modules/tasks.module';
 
 @Module({
   imports: [
@@ -16,8 +15,7 @@ import { Task } from './entities/task.entity';
       entities: [Task],
       synchronize: false,
     }),
+    TasksModule,
   ],
-  controllers: [TasksController],
-  providers: [TasksService],
 })
 export class AppModule {}
