@@ -1,10 +1,10 @@
 # Frontend Hands-On Activity
 
-This is the hands-on activity that the frontend candidate will do as part of the interview process for qwire. The goal of this activity is to evaluate the skills of the candidate by giving them a Pull Request, submitted by an imaginary junior frontend, so they can review the PR and provide guidance for this fellow developer.
+This is the hands-on activity that the frontend candidate will do as part of the interview process for qwire. The goal of this activity is to evaluate the skills of the candidate by giving them a Pull Request, submitted by an imaginary junior frontend colleague, so they can review the PR and provide guidance for this fellow developer.
 
 ## Context
 
-Imagine you are working on a technical leadership position, or at least a very senior position, as a frontend developer on a company that, among other things, provides a task management system called Tachometer. You are not an integral member of the team that supports Tachometer but, Joana, the technical leader of the Tachometer team is going on vacation and asked you to help with the junior developer she have been mentoring.
+Imagine you are working on a technical leadership position, or at least a very senior position, as a frontend developer on a company that, among other things, provides a task management system called Tachometer. You are not an integral member of the team that supports Tachometer but, Joana, the technical leader of the Tachometer team is going on vacation and asked you to help with the junior developer she has been mentoring.
 
 One day, you get to your desk and you get the following message from this junior developer:
 
@@ -16,7 +16,7 @@ Now, it is your turn to help shape the career of this young developer. Let's see
 
 > Give a man a fish and you feed him for a day. Teach a man to fish and you feed him for a lifetime.
 
-In other words, "install this library" is usually a bad tip as you don't teach the developer the problem they are facing/shipping.
+In other words, just saying "install this library" isn't particularly helpful as you don't teach the developer about the problem they are facing.
 
 ## Running the Projects
 
