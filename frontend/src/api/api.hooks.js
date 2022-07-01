@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from "react-query";
-import { insertTask, getTasks, deleteTask } from "./api.requests";
+import { insertTask, getTasks, deleteTask, updateTask } from "./api.requests";
 
 export const useTasksQuery = (select) => {
   return useQuery(
@@ -26,6 +26,15 @@ export const useInsertTask = () => {
 export const useDeleteTask = () => {
   const queryClient = useQueryClient();
   return useMutation((task) => deleteTask(task), {
+    onSuccess: () => {
+      queryClient.invalidateQueries(["tasks"]);
+    },
+  });
+};
+
+export const useUpdateTask = () => {
+  const queryClient = useQueryClient();
+  return useMutation((task) => updateTask(task), {
     onSuccess: () => {
       queryClient.invalidateQueries(["tasks"]);
     },

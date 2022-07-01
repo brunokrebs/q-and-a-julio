@@ -8,6 +8,7 @@ import { useInsertTask } from "./api/api.hooks";
 
 const schema = z.object({
   title: z.string(),
+  effort: z.any(),
 });
 
 export const AddTask = () => {
@@ -19,12 +20,13 @@ export const AddTask = () => {
 
   return (
     <form
-      onSubmit={handleSubmit(({ title }) => {
+      onSubmit={handleSubmit(({ title, effort }) => {
         insertTask.mutate(
-          { title },
+          { title, effort },
           {
             onSuccess: () => {
               resetField("title");
+              resetField("effort");
             },
           }
         );
@@ -37,6 +39,12 @@ export const AddTask = () => {
             fieldName="title"
             placeholder="Type your task here"
             register={register}
+          />
+          <Input
+            fieldName="effort"
+            placeholder="Type the estimated effort"
+            register={register}
+            type="number"
           />
           <Button type="submit">Create</Button>
         </div>
