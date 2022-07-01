@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { Comment } from './comment.entity';
 
 @Entity('tasks')
 export class Task {
@@ -13,4 +14,7 @@ export class Task {
 
   @Column()
   archived: boolean = false;
+
+  @OneToMany(() => Comment, (comment) => comment.task)
+  comments: Comment[];
 }

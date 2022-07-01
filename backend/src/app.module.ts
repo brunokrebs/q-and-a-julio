@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Comment } from './entities/comment.entity';
 import { Task } from './entities/task.entity';
 import { TasksModule } from './modules/tasks.module';
 
@@ -12,7 +13,7 @@ import { TasksModule } from './modules/tasks.module';
       username: 'postgres',
       password: 'mysecretpassword',
       database: 'q-and-a',
-      entities: [Task],
+      entities: [Comment,Task],
       synchronize: false,
     }),
     TasksModule,
