@@ -68,21 +68,6 @@ export const Task = ({ task, deleteTask }) => {
             left: buttonPosition.left - 79,
           });
         });
-
-        window.addEventListener("click", (event) => {
-          let element = event.target;
-          let belongsToMenu = false;
-          while (element !== document.getElementsByClassName("body")[0]) {
-            belongsToMenu = element === openMenuButton;
-            if (belongsToMenu) {
-              break;
-            }
-            element = element.parentElement;
-          }
-          if (!belongsToMenu) {
-            setOpenMenu(null);
-          }
-        });
       }, []);
 
       return createPortal(
