@@ -1,3 +1,5 @@
+/* eslint-disable import/no-duplicates */
+// eslint-disable-next-line no-unused-vars
 import { useTasksCount } from "./api/api.hooks";
 import { useTasksQuery } from "./api/api.hooks";
 
