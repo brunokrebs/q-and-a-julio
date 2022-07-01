@@ -17,6 +17,10 @@ export class TasksService {
     await this.tasksRepository.insert(task);
   }
 
+  async updateTask(taskId: number, task: Task): Promise<void> {
+    await this.tasksRepository.update({ id: taskId }, task);
+  }
+
   async deleteTask(taskId: number): Promise<void> {
     await this.tasksRepository.delete({ id: taskId });
   }

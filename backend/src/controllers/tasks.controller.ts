@@ -1,4 +1,12 @@
-import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+} from '@nestjs/common';
 import { Task } from 'src/entities/task.entity';
 import { TasksService } from '../services/tasks.service';
 
@@ -13,7 +21,23 @@ export class TasksController {
 
   @Post()
   insertTask(@Body() task: Task): Promise<void> {
+    if (task.effort < 0) {
+      console.log('Client sent a negative effort value for a new task.');
+      return;
+    }
     return this.tasksService.insertTask(task);
+  }
+
+  @Put('/:taskId')
+  updateTask(
+    @Param('taskId') taskId: number,
+    @Body() task: Task,
+  ): Promise<void> {
+    if (task.effort < 0) {
+      console.log('Client sent a negative effort value for task id: ' + taskId);
+      return;
+    }
+    return this.tasksService.updateTask(taskId, task);
   }
 
   @Delete('/:taskId')
