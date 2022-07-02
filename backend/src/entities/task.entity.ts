@@ -7,4 +7,10 @@ export class Task {
 
   @Column()
   title: string;
+
+  @Column()
+  effort: number;
+
+  @Column()
+  archived: boolean = false;
 }
