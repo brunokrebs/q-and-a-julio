@@ -8,7 +8,7 @@ Imagine you are working on a technical leadership position, or at least a very s
 
 One day, you get to your desk and you get the following message from this junior developer:
 
-> Hey mate, [I have been working on this PR](https://github.com/brunokrebs/q-and-a/pull/1) for the last couple of weeks and now I think it is ready to ship. As Joana is still on vacation for a few days, I would like to know if you could review it for me so we can ship as soon as possible. There are a few features I'm shipping there. I tried to describe them on the PR description. Please, let me know your thoughts. Thanks!
+> Hey mate, [I have been working on this PR](https://github.com/brunokrebs/q-and-a-julio/pull/1) for the last couple of weeks and now I think it is ready to ship. As Joana is still on vacation for a few days, I would like to know if you could review it for me so we can ship as soon as possible. There are a few features I'm shipping there. I tried to describe them on the PR description. Please, let me know your thoughts. Thanks!
 
 Now, it is your turn to help shape the career of this young developer. Let's see how you can help them!
 
